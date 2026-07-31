@@ -10,9 +10,22 @@
 		3A10CAB4301C89B200C33B92 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3A10CADA301CD39F00C33B92 /* Exceptions for "Router" folder in "Router" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Package.swift,
+			);
+			target = 3A10CAB3301C89B200C33B92 /* Router */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3A10CAB6301C89B200C33B92 /* Router */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3A10CADA301CD39F00C33B92 /* Exceptions for "Router" folder in "Router" target */,
+			);
 			path = Router;
 			sourceTree = "<group>";
 		};
