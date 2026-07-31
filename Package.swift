@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Router",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v17)
     ],
     products: [
         .library(
