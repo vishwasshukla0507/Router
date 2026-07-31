@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 /// A generic router for managing navigation between different screens in SwiftUI
-protocol NavigationDestination {
+public protocol NavigationDestination {
     associatedtype Destination: View
     
     var title: String { get }
@@ -17,21 +17,21 @@ protocol NavigationDestination {
     var destinationView: Destination { get }
 }
 
-final class Router<Destination: NavigationDestination>: ObservableObject {
+public final class Router<Destination: NavigationDestination>: ObservableObject {
     
     /// Holds the stack of destinations for navigation
-    @Published var navPaths: [Destination] = []
+    @Published public var navPaths: [Destination] = []
     
-    func navigate(to destination: Destination) {
+    public func navigate(to destination: Destination) {
         navPaths.append(destination)
     }
     
-    func navigateBack() {
+    public func navigateBack() {
         guard !navPaths.isEmpty else { return }
         navPaths.removeLast()
     }
     
-    func navigateToRoot() {
+    public func navigateToRoot() {
         navPaths.removeLast(navPaths.count)
     }
     
