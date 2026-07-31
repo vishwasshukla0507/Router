@@ -22,6 +22,8 @@ public final class Router<Destination: NavigationDestination>: ObservableObject 
     /// Holds the stack of destinations for navigation
     @Published public var navPaths: [Destination] = []
     
+    public init() {}
+    
     public func navigate(to destination: Destination) {
         navPaths.append(destination)
     }
