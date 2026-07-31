@@ -2,18 +2,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "YourPackageName",
+    name: "Router",
     platforms: [
-        .iOS(.v15) // Set your minimum iOS version here
+        .iOS(.v15)
     ],
     products: [
         .library(
-            name: "YourPackageName",
-            targets: ["YourPackageName"]),
+            name: "Router",
+            targets: ["Router"]
+        ),
     ],
     targets: [
         .target(
-            name: "YourPackageName",
-            dependencies: []), // Add paths: ["OriginalFolderName"] here if you didn't move your files to a Sources folder
+            name: "Router",
+            dependencies: [],
+            path: "Router/Sources" // <--- Points SPM directly to your source files
+        )
     ]
 )
